@@ -22,9 +22,9 @@ class DetailActivity : AppCompatActivity() {
         titleTextView = findViewById(R.id.mediaTitle)
         bylineTextView = findViewById(R.id.mediaByline)
         abstractTextView = findViewById(R.id.mediaAbstract)
-        val article = intent.getSerializableExtra(ARTICLE_EXTRA) as Article
-        titleTextView.text = article.headline?.main
-        bylineTextView.text = article.byline?.original
+        val article = intent.getSerializableExtra(ARTICLE_EXTRA) as DisplayArticle
+        titleTextView.text = article.headline
+        bylineTextView.text = article.byline
         abstractTextView.text = article.abstract
 
         Glide.with(this)
